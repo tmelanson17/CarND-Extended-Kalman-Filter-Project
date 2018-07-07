@@ -8,6 +8,7 @@
 #include <fstream>
 #include "kalman_filter.h"
 #include "tools.h"
+#define PI 3.14159265f
 
 class FusionEKF {
 public:

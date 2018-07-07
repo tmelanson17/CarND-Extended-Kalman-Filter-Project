@@ -70,6 +70,8 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
     //check division by zero
     if (px == 0 && py == 0){
         cout << "Error - Division by Zero" << endl;
+        Hj = MatrixXd::Zero(4, 4);
+        return Hj;
     }
     //compute the Jacobian matrix
     float pabs = sqrt(px*px + py*py);
